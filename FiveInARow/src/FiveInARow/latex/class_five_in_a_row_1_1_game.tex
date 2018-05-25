@@ -1,0 +1,128 @@
+\hypertarget{class_five_in_a_row_1_1_game}{}\section{Five\+In\+A\+Row.\+Game osztÃ¡lyreferencia}
+\label{class_five_in_a_row_1_1_game}\index{Five\+In\+A\+Row.\+Game@{Five\+In\+A\+Row.\+Game}}
+A Five\+In\+A\+Row.\+Game osztÃ¡ly szÃ¡rmazÃ¡si diagramja\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_five_in_a_row_1_1_game}
+\end{center}
+\end{figure}
+\subsection*{Publikus tagfÃ¼ggvÃ©nyek}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_five_in_a_row_1_1_game_a4c602680cf59ce60fa13246477e0e565}{do\+New\+Game} ()
+\item 
+void \hyperlink{class_five_in_a_row_1_1_game_a25cb45581452401da917ba92fc622a51}{do\+Resign} ()
+\item 
+void \hyperlink{class_five_in_a_row_1_1_game_ab07617f00f0f27bcc3a6d90f2c6ccd60}{do\+Replay} ()
+\item 
+void \hyperlink{class_five_in_a_row_1_1_game_a35ea58b4d8584560d43e6847d17d0817}{game\+Over} (String str)
+\item 
+void \hyperlink{class_five_in_a_row_1_1_game_a34febb68cabf256e603f0ac8b93961f7}{write\+Matrix} (String filename, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} matrix)
+\end{DoxyCompactItemize}
+\subsection*{Statikus publikus tagfÃ¼ggvÃ©nyek}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_five_in_a_row_1_1_game_a494d022b20310eba3b72f2975ae0f190}{readints} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} matrix, String line, int i)  throws File\+Not\+Found\+Exception 
+\end{DoxyCompactItemize}
+\subsection*{Publikus attribÃºtumok}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_a1f68c05489c192c40d74d1dc854d3a46}\label{class_five_in_a_row_1_1_game_a1f68c05489c192c40d74d1dc854d3a46}} 
+Buffered\+Writer {\bfseries bw}
+\item 
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_a4a5ef09201236754a477bfe4ae985f07}\label{class_five_in_a_row_1_1_game_a4a5ef09201236754a477bfe4ae985f07}} 
+Buffered\+Reader {\bfseries br}
+\end{DoxyCompactItemize}
+\subsection*{Statikus publikus attribÃºtumok}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_af8ed6312b46d9f0645db3d3d5f49908f}\label{class_five_in_a_row_1_1_game_af8ed6312b46d9f0645db3d3d5f49908f}} 
+static J\+Button {\bfseries new\+Game\+Button}
+\item 
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_ac2452fb71ab9d19b9a05e91644d857d6}\label{class_five_in_a_row_1_1_game_ac2452fb71ab9d19b9a05e91644d857d6}} 
+static J\+Button {\bfseries resign\+Button}
+\item 
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_a3ce1e1d6aaa3233f68346805a672579c}\label{class_five_in_a_row_1_1_game_a3ce1e1d6aaa3233f68346805a672579c}} 
+static J\+Button {\bfseries replay\+Button}
+\item 
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_a3fda33ad3f7293b311c20780ac1c1c90}\label{class_five_in_a_row_1_1_game_a3fda33ad3f7293b311c20780ac1c1c90}} 
+static J\+Label {\bfseries message}
+\end{DoxyCompactItemize}
+
+
+\subsection{RÃ©szletes leÃ­rÃ¡s}
+Ebben az osztályban a játékkal kapcsolatos metódusok kerültem mint például, új játék létrehozása, játék feladása, játék visszajátszása, játék vége állapot, illetve a visszajátszásnál használt fájlkezelés is itt valósul meg. Létrehozza a táblát a do\+New\+Game metódusban. \begin{DoxyAuthor}{SzerzÅ‘}
+Roland 
+\end{DoxyAuthor}
+
+
+\subsection{TagfÃ¼ggvÃ©nyek dokumentÃ¡ciÃ³ja}
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_a4c602680cf59ce60fa13246477e0e565}\label{class_five_in_a_row_1_1_game_a4c602680cf59ce60fa13246477e0e565}} 
+\index{Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}!do\+New\+Game@{do\+New\+Game}}
+\index{do\+New\+Game@{do\+New\+Game}!Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}}
+\subsubsection{\texorpdfstring{do\+New\+Game()}{doNewGame()}}
+{\footnotesize\ttfamily void Five\+In\+A\+Row.\+Game.\+do\+New\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Elkezdõdik egy új játék, Ez az action\+Performed() metódusban hívódik meg, amikor a felhasználó az új játék gombra kattint valamint indításkor a \hyperlink{class_five_in_a_row_1_1_board}{Board} konstruktorában. \mbox{\Hypertarget{class_five_in_a_row_1_1_game_ab07617f00f0f27bcc3a6d90f2c6ccd60}\label{class_five_in_a_row_1_1_game_ab07617f00f0f27bcc3a6d90f2c6ccd60}} 
+\index{Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}!do\+Replay@{do\+Replay}}
+\index{do\+Replay@{do\+Replay}!Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}}
+\subsubsection{\texorpdfstring{do\+Replay()}{doReplay()}}
+{\footnotesize\ttfamily void Five\+In\+A\+Row.\+Game.\+do\+Replay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A játék visszajátszásáért felelõs függvény. Ez a metódus az action\+Performed() metódusban kerül meghívásra, amikor a felhasználó rákattint a Replay button-\/ra. Az elõzõ játékot/játékokat lépésrõl lépésre vissza lehet játszani a replay gomb lenyomásával. Egy gomb nyomás egy lépést játszik vissza. \mbox{\Hypertarget{class_five_in_a_row_1_1_game_a25cb45581452401da917ba92fc622a51}\label{class_five_in_a_row_1_1_game_a25cb45581452401da917ba92fc622a51}} 
+\index{Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}!do\+Resign@{do\+Resign}}
+\index{do\+Resign@{do\+Resign}!Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}}
+\subsubsection{\texorpdfstring{do\+Resign()}{doResign()}}
+{\footnotesize\ttfamily void Five\+In\+A\+Row.\+Game.\+do\+Resign (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A jelenlegi játékos ( current player) feladja a játékot. Ez a metódus az action\+Performed() metódusban kerül meghívásra, amikor a felhasználó rákattint a Resign button-\/ra. A játék véget ér és az ellenfél nyer. \mbox{\Hypertarget{class_five_in_a_row_1_1_game_a35ea58b4d8584560d43e6847d17d0817}\label{class_five_in_a_row_1_1_game_a35ea58b4d8584560d43e6847d17d0817}} 
+\index{Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}!game\+Over@{game\+Over}}
+\index{game\+Over@{game\+Over}!Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}}
+\subsubsection{\texorpdfstring{game\+Over()}{gameOver()}}
+{\footnotesize\ttfamily void Five\+In\+A\+Row.\+Game.\+game\+Over (\begin{DoxyParamCaption}\item[{String}]{str }\end{DoxyParamCaption})}
+
+Ez a metódus akkor hívódik meg amikor a játék véget ér. Az str paraméter a megjelenítendõ szöveg. A gombok be és kikapcsolódnak, hogy látszódjon a játék már nincs folyamatban. 
+\begin{DoxyParams}{ParamÃ©terek}
+{\em str} & A megjelenítendõ szöveg. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_a494d022b20310eba3b72f2975ae0f190}\label{class_five_in_a_row_1_1_game_a494d022b20310eba3b72f2975ae0f190}} 
+\index{Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}!readints@{readints}}
+\index{readints@{readints}!Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}}
+\subsubsection{\texorpdfstring{readints()}{readints()}}
+{\footnotesize\ttfamily static void Five\+In\+A\+Row.\+Game.\+readints (\begin{DoxyParamCaption}\item[{int}]{matrix\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{String}]{line,  }\item[{int}]{i }\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [static]}}
+
+Az elõzõ játékok fájlból való beolvasása történik a metódusban. Ez a metódus a \hyperlink{class_five_in_a_row_1_1_game_ab07617f00f0f27bcc3a6d90f2c6ccd60}{do\+Replay()} metódusban hívódik meg. Amikor vissza szeretnénk játszani egy játékot a Replay gomb megnyomásával egyesével minden lépést beolvas. 
+\begin{DoxyParams}{ParamÃ©terek}
+{\em matrix} & A matrix paraméterhez a táblát kell megadni amibe beolvassuk a lépést. \\
+\hline
+{\em line} & A line paraméterben egy beolvasott sort adunk meg amit beírunk a mátrix i. sorába. \\
+\hline
+{\em i} & A line paraméterben egy beolvasott sort adunk meg amit beírunk a mátrix i. sorába. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{KivÃ©telek}
+{\em File\+Not\+Found\+Exception} & Ha nem találja a fájlt akkor File\+Not\+Fount\+Exceptiont dob. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_five_in_a_row_1_1_game_a34febb68cabf256e603f0ac8b93961f7}\label{class_five_in_a_row_1_1_game_a34febb68cabf256e603f0ac8b93961f7}} 
+\index{Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}!write\+Matrix@{write\+Matrix}}
+\index{write\+Matrix@{write\+Matrix}!Five\+In\+A\+Row\+::\+Game@{Five\+In\+A\+Row\+::\+Game}}
+\subsubsection{\texorpdfstring{write\+Matrix()}{writeMatrix()}}
+{\footnotesize\ttfamily void Five\+In\+A\+Row.\+Game.\+write\+Matrix (\begin{DoxyParamCaption}\item[{String}]{filename,  }\item[{int}]{matrix\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+A tábla vagyis a mátrix fájlba való írása itt történik, az a visszajátszás miatt szükséges. A metódus a do\+Click\+Square() metódusban hívódik meg. Tehát minden lépés után kiírja egy fájlba a jelenlegi állást, amit majd késõbb vissza tudunk olvasni, a visszajátszáshoz.
+
+
+\begin{DoxyParams}{ParamÃ©terek}
+{\em filename} & A filename paraméter a fájl nevét jelenti amibe írni fogunk. \\
+\hline
+{\em matrix} & A matrix paraméter pedig a táblát amit lementünk a fájlba. \\
+\hline
+\end{DoxyParams}
+
+
+Ez a dokumentÃ¡ciÃ³ az osztÃ¡lyrÃ³l a kÃ¶vetkezÅ‘ fÃ¡jl alapjÃ¡n kÃ©szÃ¼lt\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+java\end{DoxyCompactItemize}
